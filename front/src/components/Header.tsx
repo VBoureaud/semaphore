@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Activity, Wifi, Clock } from 'lucide-react';
 import type { TopicSignal } from '../types';
 import { systemStatus } from '../mockData';
-import { WalletButton } from './WalletButton';
 
 interface Props {
   topics: TopicSignal[];
@@ -135,9 +134,8 @@ export function Header({ topics }: Props) {
               </div>
             </div>
 
-                        {/* Right: Status indicators */}
-            <div className="flex items-center gap-3 sm:gap-6">
-              <WalletButton />
+            {/* Right: Status indicators */}
+            <div className="hidden md:flex items-center gap-6">
               {/* Network health */}
               <div className="text-right">
                 <div className="flex items-center gap-1.5 justify-end mb-0.5">
